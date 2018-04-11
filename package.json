@@ -1,0 +1,17 @@
+{
+  "name": "bigdesk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hlstudio/bigdesk.git",
+  "author": "jarvisaoieong <kinua1230@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "config": "^1.30.0",
+    "express": "^4.16.3",
+    "node-dev": "^3.1.3",
+    "request": "^2.85.0"
+  },
+  "scripts": {
+    "start": "node-dev ."
+  }
+}
