@@ -2,6 +2,18 @@
 
 UPDATE: Server proxy to avoid cors
 
+## USAGE
+
+requirement: > node 8
+
+```shell
+$ cp config/default.js config/development.js
+$ vi config/development.js
+$ node .
+```
+
+<hr>
+
 Live charts and statistics for Elasticsearch 2.x /5.x cluster.
 ## 2016-10-30
 - How to use for ES5.x
