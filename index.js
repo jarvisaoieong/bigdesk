@@ -5,9 +5,15 @@ const config = require('config')
 const app = express()
 
 app.use('/', express.static(__dirname + '/_site'))
-app.get('/proxy', (req, res) => {
+app.get('/proxy', (req, res, next) => {
   const url = req.query.url
-  request(url).pipe(res)
+  request(url)
+    .on('error', next)
+    .pipe(res)
+})
+
+app.use((err, req, res, next) => {
+  res.status(500).send({ error: err.message })
 })
 
 app.listen(config.port, () =>
